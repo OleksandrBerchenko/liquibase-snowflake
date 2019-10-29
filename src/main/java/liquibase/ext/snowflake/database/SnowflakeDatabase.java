@@ -139,7 +139,7 @@ public class SnowflakeDatabase extends AbstractJdbcDatabase {
     }
 
     @Override
-    public String getAutoIncrementClause(BigInteger startWith, BigInteger incrementBy) {
+    public String getAutoIncrementClause(BigInteger startWith, BigInteger incrementBy, String generationType, Boolean defaultOnNull) {
         if (startWith != null && incrementBy != null) {
             return " AUTOINCREMENT(" + startWith + "," + incrementBy + ") ";
         }

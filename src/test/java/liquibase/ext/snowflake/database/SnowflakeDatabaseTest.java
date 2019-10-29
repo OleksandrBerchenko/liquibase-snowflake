@@ -138,8 +138,8 @@ public class SnowflakeDatabaseTest {
     @Test
     public void testGetAutoIncrementClause() {
         assertEquals("", database.getAutoIncrementClause());
-        assertEquals(" AUTOINCREMENT ", database.getAutoIncrementClause(null, null));
-        assertEquals(" AUTOINCREMENT(1,1) ", database.getAutoIncrementClause(new BigInteger("1"), new BigInteger("1")));
+        assertEquals(" AUTOINCREMENT ", database.getAutoIncrementClause(null, null, null, null));
+        assertEquals(" AUTOINCREMENT(1,1) ", database.getAutoIncrementClause(new BigInteger("1"), new BigInteger("1"), null, null));
     }
 
     @Test
